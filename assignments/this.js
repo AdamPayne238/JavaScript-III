@@ -29,9 +29,17 @@ console.log(myGhost.booUpperCase()); // BOO!!
 function adam(){
     console.log(this.dude)
 }
-const dude = "yerd";
+let dude = "yerd";
 adam();
-console.log(this);
+console.log(dude);
+
+// Original version
+// function adam(){
+//     console.log(this.dude)
+// }
+// let dude = "yerd";
+// adam();
+// console.log(this);
 
 //
 
