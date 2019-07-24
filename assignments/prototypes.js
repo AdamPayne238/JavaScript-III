@@ -136,3 +136,46 @@ Humanoid.prototype.greet = function(){
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+      //stretch hero
+      const Hero = new Humanoid({
+        createdAt: new Date(),
+        dimensions: {
+          length: 25,
+          width: 25,
+          height: 50,
+        },
+        healthPoints: 9000,
+        name: 'Light',
+        team: 'Light Realm',
+        weapons: [
+          'Spell of life',
+          'Book of light',
+        ],
+        language: 'Lightish.',
+      });
+
+    //stretch villain
+    const Villain = new Humanoid({
+        createdAt: new Date(),
+        dimensions: {
+          length: 225,
+          width: 225,
+          height: 500,
+        },
+        healthPoints: 9999,
+        name: 'Evil',
+        team: 'Dark Realm',
+        weapons: [
+          'Spell of Death',
+        ],
+        language: 'Unknown.',
+      });
+  
+    // new console logs for hero and villain
+    console.log(Hero.takeDamage())
+    console.log(Villain.greet())
+    console.log(Hero.greet())
+    console.log(Villain.takeDamage())
+    console.log(Villain.destroy())
+    console.log("The Light Banished Evil from this Realm.")
